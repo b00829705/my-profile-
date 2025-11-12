@@ -1,70 +1,120 @@
-/* style.css */
+/* --- General layout --- */
 body {
+  background-color: #f4f6f8;
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
-  margin: 0;
-  padding: 20px;
   color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
+/* --- Container --- */
 .container {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 700px;
+  margin: 40px auto;
 }
 
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  margin-bottom: 20px;
+/* --- Cards --- */
+.card-white {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+/* --- Text alignment --- */
+.text-center {
   text-align: center;
 }
 
+/* --- Profile image --- */
+.img-circle {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+/* --- Button design --- */
+.btn-blue {
+  background-color: #0077b5;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-blue:hover {
+  background-color: #005983;
+}
+
+/* --- Section titles --- */
 h1 {
   color: #1e293b;
+  font-size: 32px;
 }
 
 h2 {
   color: #0f766e;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-top: 15px;
+/* --- Paragraphs --- */
+p {
+  font-size: 17px;
+  color: #444;
 }
 
-.social-buttons a {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: #0077b5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+/* --- Social icons list --- */
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
 }
 
-.social-buttons a:hover {
-  background-color: #005983;
+.list-inline > li {
+  display: inline;
+  padding: 0 20px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #555;
-}
-
-.footer-icons a {
+/* --- Social icons --- */
+.icon-link {
   color: #0077b5;
-  margin: 0 10px;
-  transition: transform 0.2s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-icons a:hover {
-  transform: scale(1.1);
+.icon-link:hover {
   color: #ff4081;
+  transform: scale(1.1);
+}
+
+/* --- Responsive design --- */
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 90%;
+  }
+
+  .img-circle {
+    width: 120px;
+    height: 120px;
+  }
 }
